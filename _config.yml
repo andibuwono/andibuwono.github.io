@@ -1,37 +1,69 @@
-title: Hello, world! I'm David Freeman
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-permalink: ':title/'
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-site-twitter: #if your site has a twitter account, enter it here
+### Site Settings ###
+title               : andiBuwono
+description         : >-                               # >- means to ignore newlines until "url:"
+                      a telcoder..
 
-# Author Settings
-author: David Freeman # add your name
-author-img: david-freeman.jpg # add your photo
-about-author: I am a web developer focusing on front-end development. Always hungry to keep learning. # add description
-social-twitter: # add your Twitter handle
-social-facebook: # add your Facebook handle
-social-github: artemsheludko # add your Github handle
-social-linkedin: # add your Linkedin handle
-social-email: # add your Email address
+url                 : "http://127.0.0.1:4000"                               # base hostname & protocol for your site (e.g. http://example.com)
+baseurl             : ""                                                    # subpath of your site (e.g. /blog) [IMPORTANT: use "" if your are hosting at https://username.github.io directly]
+# repository          : YoussefRaafatNasry/portfolYOU    # repository metadata on GitHub Pages [know more at https://help.github.com/en/articles/repository-metadata-on-github-pages]
+# remote_theme       : YoussefRaafatNasry/portfolYOU    # uncomment this if you are using it as a remote theme
 
-# Disqus
-discus-identifier: mr-brown # add your discus identifier
+                      # I turn coffee into code,
+                      # use tabs over spaces
+                      # and never broke production.
 
-# Tracker
-analytics: # Google Analytics
+### Author Info ###
+author:
+  name              : Andi Buwono
+  image             : assets/image/landing.jpg
+# behance           : your_username
+# dribbble          : your_username
+  email             : andi.buwono@gmail.com
+# facebook          : your_username
+  github            : andibuwono
+# gitlab            : your_username
+# instagram         : your_username
+# linkedin          : your_username
+# medium            : your_username
+# soundcloud        : your_username
+# spotify           : your_username
+# stackoverflow     : your_user_id
+# tumblr            : your_username.tumblr.com
+# twitch            : your_username
+# twitter           : andibuw
+# vimeo             : your_username
+# youtube           : your_channel_name
 
-# Build Settings
-markdown: kramdown
-plugins:
-  - jekyll-sitemap
-  - jekyll-paginate
-  - jemoji
 
-paginate: 8
-paginate_path: "/page/:num"
+### Pagination ###
+paginate: 6
+paginate_path: "/articles/page-:num/"
 
-exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
+
+### Posts Permalink ###
+permalink: articles/:title
+
+
+### Collections ###
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name
+
+
+### Defaults for collections ###
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "page"
+
+
+### Exclude from processing ###
+exclude:
+- README.md
+- CONTRIBUTING.md
+- LICENSE
+- Gemfile
+- Gemfile.lock
